@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: lightslategray;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: grey;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: lightsalmon;
+        }
+
+        .especial {
+            background-color: rgb(210, 133, 243);
+        }
+
+        a::before {
+            content: '[clica]';
+            text-decoration: none;
+            font-weight: normal;
+            color: black;
+        }
+
+        a::after {
+            content: '[link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: rgb(44, 42, 42);
+        }
+    </style>
+</head>
+<body>
+    <h1>personalizando links</h1>
+    <ul>
+        <li><a href="https://youtu.be/9VQ-qyHR0W0?si=RQduC4Nb9xBV4wb1">video 1</a></li>
+        <li><a href="https://www.youtube.com/@alanzoka" class="especial">canal youtube</a></li>
+        <li><a href="https://www.twitch.tv/">site roxinha</a></li>
+    </ul>
+</body>
+</html>
