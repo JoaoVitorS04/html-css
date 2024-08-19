@@ -11,15 +11,30 @@
         table {
             width: 400px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th {
             border: 1px solid black;
             text-align: center;
             padding: 5px;
         }
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(112, 118, 124);
+        }
         thead {
             background-color: gray;
             color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+        tbody > tr:nth-child(2n) {
+            background-color: rgb(190, 185, 185);
         }
         tfoot {
             background-color: gray;
@@ -30,10 +45,11 @@
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estados</th>
-                <th>População</th>
+                <th scope="col">Estados</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -49,10 +65,18 @@
                 <td>Bahia</td>
                 <td>14 873 064</td>
              </tr>
+             <tr>
+                <td>Logo ali</td>
+                <td>002 89 22</td>
+             </tr>
+             <tr>
+                <td>Tão Tão Distante</td>
+                <td>09 888 789</td>
+             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td>001</td>
             </tr>
         </tfoot>
